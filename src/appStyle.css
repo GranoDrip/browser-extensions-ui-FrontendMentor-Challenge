@@ -52,7 +52,14 @@
     }
 
 
-
+.extensionsContainer{
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    max-width: fit-content;
+    margin: 0 auto;
+}
 
 
 

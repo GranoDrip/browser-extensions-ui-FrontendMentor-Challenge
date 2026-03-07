@@ -35,9 +35,19 @@ export default function App(){
 
             <FilterBar theme={theme}/>
 
-            {console.log(data[0])}
-
-            {data[0] && <ExtensionCard name={data[0].name} desc={data[0].description} logo={data[0].logo} theme={theme} />}
+            <div className={"extensionsContainer " + theme}>
+                {
+                    data.map((e, i) => (
+                        <ExtensionCard
+                            key={i}
+                            name={e.name}
+                            desc={e.description}
+                            logo={e.logo}
+                            theme={theme}
+                        />
+                    ))
+                }                
+            </div>
 
         </>
     )
