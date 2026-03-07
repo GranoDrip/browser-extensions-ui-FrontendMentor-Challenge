@@ -16,6 +16,8 @@
         background: var(--GradientLight);
     }
 
+
+    /* CONTAINER LOGO E TASTO THEME*/
     .logoContainer{
         width: 80%;
         height: max-content;
@@ -23,11 +25,11 @@
         margin: 0 auto;
         margin-top: 1rem;
         border-radius: 8px;
-        border: 2px solid var(--Neutral200);
 
         padding-left: 10px;
         padding-top: 5px;
         padding-bottom: 5px;
+        padding-right: 10px;
 
 
         display: flex;
@@ -38,25 +40,18 @@
 
     .logoContainer.light{
         background: var(--Neutral0);
+        border: 2px solid var(--Neutral200);
     }
-
     .logoContainer.dark{
         background: var(--Neutral700);
     }
 
+    /* LOGO SVG*/
     .logoImage{
         height: max-content;
     }
 
-    /* Per il light va scuro */
-    .logoImage.light{
-        fill: var(--Neutral700);
-    }
 
-    /* Per il dark va chiaro */
-    .logoImage.dark{
-        fill: var(--Neutral0);
-    }
 
 
 

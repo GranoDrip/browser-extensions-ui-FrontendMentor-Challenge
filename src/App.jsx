@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
+import FilterBar from './Components/FilterBar';
+import ThemeButton from './Components/ThemeButton';
 import dataFile from "./assets/data.json" // File con i dati delle estensioni
 import "./appStyle.css"
-
-// Posso pensare di fare una concatenazione di classi (themeBlack, themeWhite) in modo da evitare cose strane
 
 export default function App(){
     
@@ -15,6 +15,7 @@ export default function App(){
     // Gestione del tema
     const [darkTheme, setDark] = useState(false);
     const theme = darkTheme ? "dark" : "light"
+    const logo = darkTheme ? "src/assets/images/lightLogo.svg": "src/assets/images/darkLogo.svg"
     useEffect(() => {
       document.body.className = theme;
     }, [theme]);
@@ -22,9 +23,15 @@ export default function App(){
     return(
         <>
 
+            {/* QUI IL PRIMO DIV GESTISCE IL TEMA E IL TITOLO ( FAMMI DIVENTARE UN COMPONENTE! ) */}
             <div className={"logoContainer " + theme}>
-                <img src="src\assets\images\logo.svg" alt="" />
+                <img src={logo} alt="" />
+
+                <ThemeButton darkTheme={darkTheme} setDark={setDark}></ThemeButton>
+                
             </div>
+
+            <FilterBar theme={theme}/>
 
         
 

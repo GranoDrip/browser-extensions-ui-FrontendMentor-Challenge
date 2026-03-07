@@ -1,0 +1,24 @@
+@import "../../assets/commons.css";
+
+/*
+* TODO: Aggiungi gli active states
+*/
+
+.themeButton{
+        width: max-content;
+        height: max-content;
+        padding: 10px;
+
+        display: flex;
+
+        border-radius: 8px;
+
+        border: none;
+    }
+    
+.themeButton.light{
+    background-color: var(--Neutral100);
+}
+.themeButton.dark{
+    background-color: var(--Neutral600);
+}
