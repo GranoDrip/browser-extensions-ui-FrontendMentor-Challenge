@@ -1,0 +1,63 @@
+    /* Importo il font */
+    @import "./assets/commons.css";
+
+    html,body{
+        height: 100%;
+        margin: 0;
+        font-family: var(--FontFamily);
+        justify-content: center;
+    }
+
+    body.dark{
+        background: var(--GradientDark);
+    }
+
+    body.light{
+        background: var(--GradientLight);
+    }
+
+    .logoContainer{
+        width: 80%;
+        height: max-content;
+
+        margin: 0 auto;
+        margin-top: 1rem;
+        border-radius: 8px;
+        border: 2px solid var(--Neutral200);
+
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+
+        display: flex;
+        justify-content: space-between; /* uno a sinistra, uno a destra */
+        align-items: center;
+
+    }
+
+    .logoContainer.light{
+        background: var(--Neutral0);
+    }
+
+    .logoContainer.dark{
+        background: var(--Neutral700);
+    }
+
+    .logoImage{
+        height: max-content;
+    }
+
+    /* Per il light va scuro */
+    .logoImage.light{
+        fill: var(--Neutral700);
+    }
+
+    /* Per il dark va chiaro */
+    .logoImage.dark{
+        fill: var(--Neutral0);
+    }
+
+
+
+
