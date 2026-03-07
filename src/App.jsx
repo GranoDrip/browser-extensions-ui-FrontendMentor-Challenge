@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import FilterBar from './Components/FilterBar';
 import ThemeButton from './Components/ThemeButton';
+import ExtensionCard from './Components/ExtensionCard';
+
 import dataFile from "./assets/data.json" // File con i dati delle estensioni
 import "./appStyle.css"
 
@@ -33,7 +35,9 @@ export default function App(){
 
             <FilterBar theme={theme}/>
 
-        
+            {console.log(data[0])}
+
+            {data[0] && <ExtensionCard name={data[0].name} desc={data[0].description} logo={data[0].logo} theme={theme} />}
 
         </>
     )

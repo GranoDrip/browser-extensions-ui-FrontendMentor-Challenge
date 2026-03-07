@@ -1,0 +1,105 @@
+@import "../../assets/commons.css";
+
+/* TODO: AGGIUNGI GLI ACTIVE STATES */
+
+/* CONTAINER DELL'INTERA CARD */
+.cardContainer {
+    border-radius: 16px;
+    width: 360px; 
+    height: 180px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    overflow: hidden; 
+}
+
+/* TEMI DEL CONTAINER */
+.cardContainer.light {  
+    background-color: var(--Neutral0);
+}
+.cardContainer.dark {
+    background-color: var(--Neutral700);
+    border: 1px solid var(--Neutral600);
+}
+
+/* LAYOUT LOGO+TESTO */
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+
+.logoIcon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 12px;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.title.light{
+    color: var(--Neutral800);
+}
+.title.dark{
+    color: var(--Neutral0);
+}
+
+
+.description {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.description.dark{
+    color: var(--Neutral300);
+}
+
+.description.light{
+    color: var(--Neutral600);
+}
+
+
+/* BOTTONI ALLA BASE */
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; 
+}
+
+.removeBtn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: transparent;
+    cursor: pointer;
+}
+.removeBtn.light{
+    color: var(--Neutral900);
+}
+.removeBtn.dark{
+    color: var(--Neutral0);
+}
+
+/* Classe di ANT per lo switch */
+.ant-switch-checked {
+    background-color: var(--Red500) !important;
+}
