@@ -43,6 +43,7 @@ export default function App(){
                             name={e.name}
                             desc={e.description}
                             logo={e.logo}
+                            isActive={e.isActive}
                             theme={theme}
                         />
                     ))
