@@ -1,19 +1,24 @@
     /* Importo il font */
     @import "./assets/commons.css";
 
-    html,body{
-        height: 100%;
+    html, body {
+        min-height: 100%; /* Cambiato da height a min-height */
         margin: 0;
         font-family: var(--FontFamily);
-        justify-content: center;
     }
-
-    body.dark{
+    
+    body.dark {
         background: var(--GradientDark);
+        background-attachment: fixed; /* Mantiene lo sfondo fermo mentre scorri */
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-
-    body.light{
+    
+    body.light {
         background: var(--GradientLight);
+        background-attachment: fixed; /* Mantiene lo sfondo fermo mentre scorri */
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
 
