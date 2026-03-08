@@ -18,8 +18,8 @@ export default function App(){
 
     // Gestione del tema
     const [darkTheme, setDark] = useState(false);
-    const theme = darkTheme ? "dark" : "light"
-    const logo = darkTheme ? "src/assets/images/lightLogo.svg": "src/assets/images/darkLogo.svg"
+        const theme = darkTheme ? "dark" : "light"
+        const logo = darkTheme ? "/images/lightLogo.svg": "/images/darkLogo.svg"
     useEffect(() => {
       document.body.className = theme;
     }, [theme]);

@@ -5,7 +5,7 @@ import "./compStyles/ThemeButton.css"
 export default function ThemeButton({darkTheme,setDark}){
     
     const theme = darkTheme ? "dark" : "light";
-    const icon = darkTheme ? "src/assets/images/icon-sun.svg" : "src/assets/images/icon-moon.svg";
+    const icon = darkTheme ? "/images/icon-sun.svg" : "/images/icon-moon.svg";
 
 
     return (

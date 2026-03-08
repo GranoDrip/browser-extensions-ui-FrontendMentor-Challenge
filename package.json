@@ -2,7 +2,7 @@
   "name": "browser-exensions-ui",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://TUO_USERNAME.github.io/browser-extensions-ui-FrontendMentor-Challenge",
+  "homepage": "https://granoDrip.github.io/browser-extensions-ui-FrontendMentor-Challenge",
   "type": "module",
   "scripts": {
     "dev": "vite",
