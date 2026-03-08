@@ -85,23 +85,65 @@
     margin-top: auto; 
 }
 
-/* == INSERISCI STATES ==*/
 .removeBtn {
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--Neutral300);
     background: transparent;
     cursor: pointer;
 }
+/* ==  TEMA CHIARO ==*/
 .removeBtn.light{
     color: var(--Neutral900);
 }
+
+.removeBtn.light:hover{
+    color: var(--Neutral0);
+    background-color: var(--Red700);
+}
+
+.removeBtn.light:focus{
+    color: var(--Neutral900);
+    background-color: var(--Neutral100);
+    outline: 2px solid var(--Red400);
+    outline-offset: 1px;
+}
+
+/* ==  TEMA SCURO ==*/
 .removeBtn.dark{
     color: var(--Neutral0);
 }
 
+.removeBtn.dark:hover{
+    color: var(--Neutral900);
+    background-color: var(--Red500);
+    border-color: transparent;
+}
+
+.removeBtn.dark:focus{
+    color: var(--Neutral0);
+    border: 1px transparent;
+    background-color: var(--Neutral600);
+    outline: 2px solid var(--Red400);
+    outline-offset: 1px;
+}
+
+
 /* == RICORDA DI METTERE GLI STATES ANCHE QUI == */
 /* Classe di ANT per lo switch */
+.ant-switch{
+    background-color: var(--Neutral600);
+}
+
 .ant-switch-checked {
     background-color: var(--Red500) !important;
+}
+
+.ant-switch-checked:hover {
+    background-color: var(--Red700) !important;
+}
+
+.ant-switch-checked:focus {
+    outline: 2px solid var(--Red400);
+    outline-offset: 1px;
 }
