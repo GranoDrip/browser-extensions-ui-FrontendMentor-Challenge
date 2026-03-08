@@ -4,16 +4,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     margin: 0 auto;
     width: 82%;
 }
 
-.headerText.light{
-    color: var(--Neutral900);
+.headerText.light{ 
+    color: var(--Neutral900); 
 }
-
-.headerText.dark{
+.headerText.dark{ 
     color: var(--Neutral0);
 }
 
@@ -21,61 +19,52 @@
     font-family: var(--FontFamily);
     font-size: 14px;
     border-radius: 24px;
-    width: max-content+1.5rem;
-    padding: 6px;
-    padding-left: 12px;
-    padding-right: 12px;
+    width: calc(max-content + 1.5rem);
+    padding: 6px 12px;
     margin: 0.3rem;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
-/* TEMI + STATES */
-/* ==== TEMA CHIARO ====*/
 .filterButton.light{
     color: var(--Neutral900);
     border: 1px solid var(--Neutral200);
     background-color: var(--Neutral0);
 }
 
-.filterButton.light:hover{
-    background-color: var(--Neutra100);
+.filterButton.light.selected {
+    color: var(--Neutral0);
+    background-color: var(--Red500);
+    border-color: var(--Red700);
 }
-.filterButton.light:focus{
-    outline: 2px solid var(--Red400);
-    outline-offset: 1px;
-}
-.filterButton.light:active{
+.filterButton.light.selected:hover {
     color: var(--Neutral0);
     background-color: var(--Red700);
-}
-.filterButton.light:active:hover{
-    background-color: var(--Red500);
+    border-color: var(--Red700);
 }
 
-
-/* ==== TEMA SCURO ==== */
 .filterButton.dark{
     color: var(--Neutral0);
     border: 1px solid var(--Neutral600);
     background-color: var(--Neutral700);
 }
 
-.filterButton.dark:hover{
-    background-color: var(--Neutral600);
-}
-
-.filterButton.dark:focus{
-    background-color: var(--Neutral600);
-
-    outline: 2px solid var(--Red400);
-    outline-offset: 1px;
-}
-
-.filterButton.dark:active{
+.filterButton.dark.selected {
+    color: var(--Neutral0);
     background-color: var(--Red500);
+    border-color: var(--Red500);
 }
-
-.filterButton.dark:active:hover{
+.filterButton.dark.selected:hover {
+    color: var(--Neutral0);
     background-color: var(--Red700);
+    border-color: var(--Red500);
 }
 
+
+.filterButton.light:hover{
+     background-color: var(--Neutra100);
+}
+
+.filterButton.dark:hover{
+     background-color: var(--Neutral600);
+}

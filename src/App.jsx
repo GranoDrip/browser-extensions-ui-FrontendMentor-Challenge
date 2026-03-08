@@ -1,3 +1,5 @@
+// App.jsx
+
 import { useEffect, useState } from 'react';
 import FilterBar from './Components/FilterBar';
 import ThemeButton from './Components/ThemeButton';
@@ -36,6 +38,18 @@ export default function App(){
         )
     }
 
+    // Gestione dei filtri
+    // -1: Non active
+    // 0: All
+    // 1: Active
+    const [filter,setFilter] = useState(0)
+
+    const filteredData = data.filter((e) => {
+        if (filter === 1) return e.isActive;
+        if (filter === -1) return !e.isActive;
+        return true;
+    });
+
     return(
         <>
 
@@ -47,14 +61,14 @@ export default function App(){
                 
             </div>
 
-            <FilterBar theme={theme}/>
+            <FilterBar theme={theme} filter={filter} setFilter={setFilter}/>
 
             <div className={"extensionsContainer " + theme}>
                 {
-                    data.map((e, i) => (
+                    filteredData.map((e, i) => (
                         <ExtensionCard
-                            key={i}
-                            index={i}
+                            key={e.name}
+                            index={data.indexOf(e)} // Passo l'indice originale per setIsActive e removeExtension
                             name={e.name}
                             desc={e.description}
                             logo={e.logo}
@@ -64,7 +78,7 @@ export default function App(){
                             removeExtension={removeExtension}
                         />
                     ))
-                }                
+                }              
             </div>
 
         </>
