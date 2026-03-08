@@ -1,6 +1,7 @@
-    /* Importo il font */
-    @import "./assets/commons.css";
-
+/* Importo il font */
+@import "./assets/commons.css";
+    
+/* BODY STYLES */
     html, body {
         min-height: 100%; /* Cambiato da height a min-height */
         margin: 0;
@@ -13,7 +14,6 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
-    
     body.light {
         background: var(--GradientLight);
         background-attachment: fixed; /* Mantiene lo sfondo fermo mentre scorri */
@@ -22,7 +22,7 @@
     }
 
 
-    /* CONTAINER LOGO E TASTO THEME*/
+    /* CONTAINER LOGO */
     .logoContainer{
         width: 80%;
         height: max-content;

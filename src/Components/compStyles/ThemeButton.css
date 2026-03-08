@@ -1,24 +1,51 @@
 @import "../../assets/commons.css";
 
-/*
-* TODO: Aggiungi gli active states
-*/
+
 
 .themeButton{
-        width: max-content;
-        height: max-content;
-        padding: 10px;
-
-        display: flex;
-
-        border-radius: 8px;
-
-        border: none;
-    }
+    display: flex;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
     
+    border-radius: 8px;
+    border: 2px solid transparent; 
+}
+    
+/* TEMA CHIARO + STATES */
 .themeButton.light{
     background-color: var(--Neutral100);
 }
+
+.themeButton.light:hover{
+    background-color: var(--Neutral300);
+    cursor: pointer;
+}
+
+.themeButton.light:focus{
+    cursor: pointer;
+    
+    /* LINEA ESTERNA */
+    outline: 2px solid var(--Red400);
+    outline-offset: 1px;
+}
+
+/* === TEMA SCURO + STATES == */
 .themeButton.dark{
+    background-color: var(--Neutral800);
+}
+
+.themeButton.dark:hover{
     background-color: var(--Neutral600);
+    cursor: pointer;
+}
+
+.themeButton.dark:focus{
+    background-color: var(--Neutral600);
+    cursor: pointer;
+    
+    /* LINEA ESTERNA */
+    outline: 2px solid var(--Red400);
+    outline-offset: 1px;
+
 }
