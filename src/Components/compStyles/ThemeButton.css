@@ -10,6 +10,9 @@
     
     border-radius: 8px;
     border: 2px solid transparent; 
+
+    cursor: pointer;
+
 }
     
 /* TEMA CHIARO + STATES */
@@ -19,11 +22,9 @@
 
 .themeButton.light:hover{
     background-color: var(--Neutral300);
-    cursor: pointer;
 }
 
 .themeButton.light:focus{
-    cursor: pointer;
     
     /* LINEA ESTERNA */
     outline: 2px solid var(--Red400);

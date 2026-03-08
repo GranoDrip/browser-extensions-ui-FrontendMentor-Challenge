@@ -26,10 +26,56 @@
     padding-left: 12px;
     padding-right: 12px;
     margin: 0.3rem;
+    cursor: pointer;
 }
 
+/* TEMI + STATES */
+/* ==== TEMA CHIARO ====*/
 .filterButton.light{
     color: var(--Neutral900);
     border: 1px solid var(--Neutral200);
     background-color: var(--Neutral0);
 }
+
+.filterButton.light:hover{
+    background-color: var(--Neutra100);
+}
+.filterButton.light:focus{
+    outline: 2px solid var(--Red400);
+    outline-offset: 1px;
+}
+.filterButton.light:active{
+    color: var(--Neutral0);
+    background-color: var(--Red700);
+}
+.filterButton.light:active:hover{
+    background-color: var(--Red500);
+}
+
+
+/* ==== TEMA SCURO ==== */
+.filterButton.dark{
+    color: var(--Neutral0);
+    border: 1px solid var(--Neutral600);
+    background-color: var(--Neutral700);
+}
+
+.filterButton.dark:hover{
+    background-color: var(--Neutral600);
+}
+
+.filterButton.dark:focus{
+    background-color: var(--Neutral600);
+
+    outline: 2px solid var(--Red400);
+    outline-offset: 1px;
+}
+
+.filterButton.dark:active{
+    background-color: var(--Red500);
+}
+
+.filterButton.dark:active:hover{
+    background-color: var(--Red700);
+}
+
