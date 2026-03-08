@@ -68,3 +68,15 @@
 .filterButton.dark:hover{
      background-color: var(--Neutral600);
 }
+
+@media (max-width: 768px) {
+    .listContainer {
+        flex-direction: column;
+    }
+
+    .buttonsContainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

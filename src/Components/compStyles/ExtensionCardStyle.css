@@ -147,3 +147,21 @@
     outline: 2px solid var(--Red400);
     outline-offset: 1px;
 }
+
+/* MEDIA QUERY */
+
+@media (min-width: 768px){
+    .cardContainer {
+        width: 320px; 
+        height: 160px;
+        padding: 1.4rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .cardContainer {
+        width: 260px; 
+        height: 150px;
+        padding: 1.4rem;
+    }
+}
