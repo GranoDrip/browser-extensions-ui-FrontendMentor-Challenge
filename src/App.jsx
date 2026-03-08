@@ -22,6 +22,20 @@ export default function App(){
       document.body.className = theme;
     }, [theme]);
 
+    const setIsActive = (index) => {
+        setData(current =>
+            current.map((item, i) =>
+                i === index ? { ...item, isActive: !item.isActive } : item
+            )
+        )
+    }
+
+    const removeExtension = (index) =>{
+        setData(current => 
+            current.filter((item,i) => i !== index)
+        )
+    }
+
     return(
         <>
 
@@ -40,11 +54,14 @@ export default function App(){
                     data.map((e, i) => (
                         <ExtensionCard
                             key={i}
+                            index={i}
                             name={e.name}
                             desc={e.description}
                             logo={e.logo}
                             isActive={e.isActive}
                             theme={theme}
+                            setIsActive={setIsActive}
+                            removeExtension={removeExtension}
                         />
                     ))
                 }                

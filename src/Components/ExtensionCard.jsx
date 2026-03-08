@@ -1,7 +1,7 @@
 import { Switch } from 'antd';
 import "./compStyles/ExtensionCardStyle.css"
 
-export default function ExtensionCard({name,logo,desc,isActive,theme}){
+export default function ExtensionCard({index,name,logo,desc,isActive,theme,setIsActive,removeExtension}){
 
     return(
         <>
@@ -15,8 +15,8 @@ export default function ExtensionCard({name,logo,desc,isActive,theme}){
                 </div>
 
                 <div className={"buttonsContainer " + theme}>
-                    <button className={"removeBtn " + theme}>Remove</button>
-                    <Switch checked={isActive} />
+                    <button className={"removeBtn " + theme} onClick={()=>removeExtension(index)}>Remove</button>
+                    <Switch checked={isActive} onClick={()=>setIsActive(index)}/>
                 </div>
             </div>
         </>
